@@ -5,7 +5,7 @@ https://brasil-gospel2japanese.blogspot.com/
 video.jsというライブラリを使用しています。
 ## ファイル
 - sub/*.vtt  
-VTT形式の字幕ファイルを置きます。
+VTT形式の字幕ファイルを置きます。文字コードはUTF-8にします。
 - player.html  
 本体
 - sub-table.json  
