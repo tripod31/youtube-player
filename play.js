@@ -15,10 +15,10 @@ function setupVideo(){
         return
     }
     if (! param.includes('=')){
-        // urlパラメータがvideoIdのみの場合
-        videoId = param
+        // urlパラメータが?videoIdの場合
+        videoId = param.substring(1)
     } else{
-        // urlパラメータがv=videoIdの場合
+        // urlパラメータが?v=videoIdの場合
         const searchParams = new URLSearchParams(param)
         if (searchParams.has('v')) {
             videoId = searchParams.get('v')
@@ -34,6 +34,10 @@ function setupVideo(){
     fetch("sub-table.json")
         .then((response) => response.json())
         .then((subTable) => {
+            if (! (videoId in subTable)){
+                console.log(`videoId:${videoId}がテーブルにありません`)
+                return
+            } 
             var subFile = subTable[videoId]
             document.title = subFile.split('.').slice(0, -1).join('.')
             var subFilePath= 'sub/' + subFile
