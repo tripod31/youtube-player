@@ -2,8 +2,9 @@
 youtubeを再生しながらサーバー上の字幕ファイルを表示します。  
 このブログ用に作りました。  
 https://brasil-gospel2japanese.blogspot.com/  
+サンプルが見れるページ  
+https://brasil-gospel2japanese.blogspot.com/2025/10/blog-post_15.html  
 video.jsというライブラリを使用しています。
-
 ## ファイル
 - sub/*.vtt  
 VTT形式の字幕ファイルを置きます。文字コードはUTF-8にします。
@@ -30,4 +31,10 @@ http://_SERVER_/player.html?VIDEO_ID
 or
 http://_SERVER_/player.html?v=VIDEO_ID  
 ```
-で見れます。  
+で見れます。    
+
+## androidのLINEで見れるようにする
+LINE付属のブラウザでは見れません。外部ブラウザを指定します。URLに&openExternalBrowser=1をつけます。
+```
+http://_SERVER_/player.html?v=VIDEO_ID&openExternalBrowser=1
+```
