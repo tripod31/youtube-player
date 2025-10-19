@@ -12,16 +12,16 @@ VTT形式の字幕ファイルを置きます。文字コードはUTF-8にしま
 本体
 - sub-table.json  
 youtubeのVIDEO_IDとsub/に置いた字幕ファイルのファイル名の対応を書いたjsonファイルです。  
-VIDEO_IDはyoutubeのURLで  
-https://www.youtube.com/watch?v=vM2A2XEm9TE  
-の場合、vM2A2XEm9TEです。
 
 ## 使い方
 - HTTPサーバー上に各ファイルを置きます。
 - sub/下にVTT形式の字幕ファイルを置きます。
 - sub-table.jsonにyoutubeのVIDEO_IDとsub/に置いた字幕ファイルのファイル名の対応を書きます。  
-例：  
+VIDEO_IDはyoutubeのURLで  
+https://www.youtube.com/watch?v=vM2A2XEm9TE  
+の場合、vM2A2XEm9TEです。
 ```
+例：
 "4DFBOuQQi1s": "Aline Barros - Autor da Vida.vtt",
 ```
 
